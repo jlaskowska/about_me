@@ -23,4 +23,5 @@ jobs:
           flutter test
       - name: Compile
         run:
+          flutter config --enable-web
           flutter build web --release
