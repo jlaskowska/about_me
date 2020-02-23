@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:jlaskowska/widgets/common/avatar.dart';
 import 'package:jlaskowska/widgets/common/image_button.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomePageContent extends StatelessWidget {
   const HomePageContent({Key key}) : super(key: key);
@@ -23,7 +24,7 @@ class HomePageContent extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        _Avatar(),
+                        Avatar(size: 300),
                         SizedBox(width: 128), // TODO would be good to be flexible
                         _AboutMe(),
                       ],
@@ -40,7 +41,7 @@ class HomePageContent extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 SizedBox(height: 32),
-                _Avatar(),
+                Avatar(size: 300),
                 SizedBox(height: 32), // TODO would be good to be flexible
                 _AboutMe(),
               ],
@@ -102,21 +103,6 @@ class _AboutMe extends StatelessWidget {
           ],
         ),
       ],
-    );
-  }
-}
-
-class _Avatar extends StatelessWidget {
-  const _Avatar({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Image.asset(
-      'assets/images/home_screen/avatar.png',
-      width: 300,
-      height: 300,
     );
   }
 }
