@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jlaskowska/config/project_colors.dart';
 import 'package:jlaskowska/widgets/resume_page/sections/contact_information.dart';
 import 'package:jlaskowska/widgets/resume_page/sections/education.dart';
 import 'package:jlaskowska/widgets/resume_page/sections/employment.dart';
@@ -23,7 +24,13 @@ class ResumePageContent extends StatelessWidget {
           child: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: _PageStructure(),
+              child: DefaultTextStyle(
+                style: TextStyle(
+                  fontFamily: 'Rubik',
+                  color: ProjectColors.black,
+                ),
+                child: _PageStructure(),
+              ),
             ),
           ),
         ),
