@@ -6,13 +6,14 @@ class ResumeContent {
     'Dart',
     'Flutter',
     'Git',
-    'CI/CD',
-    'MobX',
     'Provider',
+    'MobX',
+    'CI/CD',
     'Firebase',
     'UI/UX',
-    'Xcode',
     'Jira',
+    'Testing',
+    'Xcode',
     'UML',
   ];
 }
