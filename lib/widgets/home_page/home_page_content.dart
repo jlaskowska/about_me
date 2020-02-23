@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jlaskowska/config/personal_info.dart';
 import 'package:jlaskowska/widgets/common/avatar.dart';
 import 'package:jlaskowska/widgets/common/image_button.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -71,7 +72,7 @@ class _AboutMe extends StatelessWidget {
         ),
         SizedBox(height: 24),
         Text(
-          'Joanna Laskowska',
+          PersonalInfo.name,
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 45,
@@ -80,7 +81,7 @@ class _AboutMe extends StatelessWidget {
         ),
         SizedBox(height: 24),
         Text(
-          'Flutter Developer',
+          PersonalInfo.position,
           style: TextStyle(
             fontSize: 30,
           ),
@@ -90,13 +91,13 @@ class _AboutMe extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ImageButton(
-              onPressed: () async => await launch('https://www.linkedin.com/in/joanna-laskowska-57aa201a0/'),
+              onPressed: () async => await launch(PersonalInfo.linkedInUrl),
               size: 64,
               assetPath: 'assets/images/home_screen/linkedin.png',
             ),
             SizedBox(width: 16),
             ImageButton(
-              onPressed: () async => await launch('https://github.com/jlaskowska'),
+              onPressed: () async => await launch(PersonalInfo.gitHubUrl),
               size: 64,
               assetPath: 'assets/images/home_screen/github.png',
             ),
