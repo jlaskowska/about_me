@@ -1,5 +1,5 @@
 name: pull_request_workflow
-on: push
+on: pull_request
 jobs:
   code-analysis-tests-compile:
     name: Code Analysis + Tests + Compile
