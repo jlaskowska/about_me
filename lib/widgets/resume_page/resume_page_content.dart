@@ -61,6 +61,7 @@ class _PageStructure extends StatelessWidget {
             Expanded(
               child: Column(
                 // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Skills(),
                   SizedBox(height: 8),
