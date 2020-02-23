@@ -1,4 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:jlaskowska/widgets/resume_page/sections/contact_information.dart';
+import 'package:jlaskowska/widgets/resume_page/sections/education.dart';
+import 'package:jlaskowska/widgets/resume_page/sections/employment.dart';
+import 'package:jlaskowska/widgets/resume_page/sections/hobbies.dart';
+import 'package:jlaskowska/widgets/resume_page/sections/languages.dart';
+import 'package:jlaskowska/widgets/resume_page/sections/projects.dart';
+import 'package:jlaskowska/widgets/resume_page/sections/skills.dart';
+import 'package:jlaskowska/widgets/resume_page/sections/summary.dart';
 
 class ResumePageContent extends StatelessWidget {
   const ResumePageContent({Key key}) : super(key: key);
@@ -11,9 +19,12 @@ class ResumePageContent extends StatelessWidget {
         aspectRatio: 0.7072,
         child: Container(
           color: Colors.white,
-          constraints: BoxConstraints.expand(),
+          // constraints: BoxConstraints.expand(),
           child: SingleChildScrollView(
-            child: _PageStructure(),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: _PageStructure(),
+            ),
           ),
         ),
       ),
@@ -27,21 +38,36 @@ class _PageStructure extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
-        Text(
-          'Coming soon!',
-          style: TextStyle(
-            fontSize: 18,
-            color: Colors.black,
-          ),
-        ),
-        Container(
-          height: 400,
-          color: Colors.green,
-        ),
-        Container(
-          height: 400,
-          color: Colors.orange,
+        ContactInformation(),
+        SizedBox(height: 8),
+        Summary(),
+        SizedBox(height: 8),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Expanded(
+              child: Projects(),
+            ),
+            SizedBox(width: 8),
+            Expanded(
+              child: Column(
+                // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Skills(),
+                  SizedBox(height: 8),
+                  Employment(),
+                  SizedBox(height: 8),
+                  Education(),
+                  SizedBox(height: 8),
+                  Languages(),
+                  SizedBox(height: 8),
+                  Hobbies(),
+                ],
+              ),
+            ),
+          ],
         ),
       ],
     );
