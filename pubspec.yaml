@@ -1,0 +1,38 @@
+name: jlaskowska
+description: The personal website and app for Joanna Laskowska.
+version: 0.1.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^0.1.2
+  url_launcher: ^5.4.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.7.4
+
+flutter:
+  uses-material-design: true
+
+  assets:
+   - assets/images/home_screen/
+   - assets/images/drawer/
+
+  fonts:
+    - family: Rubik
+      fonts:
+        - asset: assets/fonts/Rubik-Regular.ttf
+        - asset: assets/fonts/Rubik-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Rubik-Bold.ttf
+          weight: 700
+
+flutter_icons:
+  android: "ic_launcher" 
+  ios: true
+  image_path: "assets_dev/app_icon/app_icon.png"
