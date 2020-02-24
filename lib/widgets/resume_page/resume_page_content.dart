@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jlaskowska/config/project_colors.dart';
+import 'package:jlaskowska/widgets/resume_page/sections/conferences.dart';
 import 'package:jlaskowska/widgets/resume_page/sections/contact_information.dart';
 import 'package:jlaskowska/widgets/resume_page/sections/education.dart';
 import 'package:jlaskowska/widgets/resume_page/sections/employment.dart';
@@ -66,6 +67,8 @@ class _PageStructure extends StatelessWidget {
                   Skills(),
                   SizedBox(height: 8),
                   Employment(),
+                  SizedBox(height: 8),
+                  Conferences(),
                   SizedBox(height: 8),
                   Education(),
                   SizedBox(height: 8),
