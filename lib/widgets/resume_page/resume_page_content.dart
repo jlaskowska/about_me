@@ -3,7 +3,7 @@ import 'package:jlaskowska/config/project_colors.dart';
 import 'package:jlaskowska/widgets/resume_page/sections/conferences.dart';
 import 'package:jlaskowska/widgets/resume_page/sections/contact_information.dart';
 import 'package:jlaskowska/widgets/resume_page/sections/education.dart';
-import 'package:jlaskowska/widgets/resume_page/sections/employment.dart';
+import 'package:jlaskowska/widgets/resume_page/sections/experience.dart';
 import 'package:jlaskowska/widgets/resume_page/sections/hobbies.dart';
 import 'package:jlaskowska/widgets/resume_page/sections/languages.dart';
 import 'package:jlaskowska/widgets/resume_page/sections/projects.dart';
@@ -66,9 +66,9 @@ class _PageStructure extends StatelessWidget {
                 children: <Widget>[
                   Skills(),
                   SizedBox(height: 8),
-                  Employment(),
-                  SizedBox(height: 8),
                   Conferences(),
+                  SizedBox(height: 8),
+                  Experience(),
                   SizedBox(height: 8),
                   Education(),
                   SizedBox(height: 8),
