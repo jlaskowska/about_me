@@ -12,8 +12,25 @@ class Conferences extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Headline('Conferences'),
+          Headline('Conferences Attended'),
           SizedBox(height: 8),
+          Center(
+            child: Image.asset(
+              'assets/images/resume/flutter_europe.png',
+              height: 65,
+            ),
+          ),
+          SizedBox(width: 16.0),
+          Center(
+            child: Text(
+              'World\'s first Flutter conference, Jan 2020.',
+              maxLines: 4,
+              style: TextStyle(
+                fontSize: 13,
+                fontStyle: FontStyle.italic,
+              ),
+            ),
+          ),
         ],
       ),
     );
