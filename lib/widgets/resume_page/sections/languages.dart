@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jlaskowska/config/project_colors.dart';
 import 'package:jlaskowska/widgets/resume_page/sections/common/headline.dart';
 
 class Languages extends StatelessWidget {
@@ -52,7 +53,7 @@ class _LanguageIcon extends StatelessWidget {
       ),
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        color: Theme.of(context).primaryColor,
+        color: ProjectColors.lightBlack,
       ),
     );
   }

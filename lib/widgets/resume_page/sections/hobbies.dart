@@ -19,19 +19,19 @@ class Hobbies extends StatelessWidget {
             children: <Widget>[
               _HobbyIcon(
                 icon: Icons.palette,
-                color: ProjectColors.black,
+                color: ProjectColors.lightBlack,
               ),
               _HobbyIcon(
                 icon: Icons.theaters,
-                color: ProjectColors.black,
+                color: ProjectColors.lightBlack,
               ),
               _HobbyIcon(
                 icon: Icons.flight,
-                color: ProjectColors.black,
+                color: ProjectColors.lightBlack,
               ),
               _HobbyIcon(
                 icon: Icons.music_note,
-                color: ProjectColors.black,
+                color: ProjectColors.lightBlack,
               ),
             ],
           ),

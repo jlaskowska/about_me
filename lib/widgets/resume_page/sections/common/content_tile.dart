@@ -11,7 +11,7 @@ class ContentTile extends StatelessWidget {
   const ContentTile({
     @required this.title,
     @required this.subtitle,
-    this.backgroundColor = ProjectColors.black,
+    this.backgroundColor = ProjectColors.lightBlack,
     this.contentColor = Colors.white,
     Key key,
   }) : super(key: key);
