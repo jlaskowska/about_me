@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jlaskowska/config/resume_content.dart';
+import 'package:jlaskowska/config/resume_settings.dart';
 import 'package:jlaskowska/widgets/resume_page/sections/common/headline.dart';
 
 class Skills extends StatelessWidget {
@@ -23,10 +23,10 @@ class Skills extends StatelessWidget {
           SizedBox(height: 8),
           Wrap(
             children: <Widget>[
-              for (int index = 0; index < ResumeContent.skills.length; index++)
+              for (int index = 0; index < ResumeSettings.skills.length; index++)
                 _SkillChip(
                   backgroundColor: colors[index % colors.length],
-                  text: ResumeContent.skills[index],
+                  text: ResumeSettings.skills[index],
                 ),
             ],
             spacing: 8,

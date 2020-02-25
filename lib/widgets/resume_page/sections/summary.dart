@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jlaskowska/config/resume_content.dart';
+import 'package:jlaskowska/config/resume_settings.dart';
 
 class Summary extends StatelessWidget {
   const Summary({Key key}) : super(key: key);
@@ -10,7 +10,7 @@ class Summary extends StatelessWidget {
       color: Colors.grey,
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: Text(
-        ResumeContent.summary,
+        ResumeSettings.summary,
         textAlign: TextAlign.justify,
         style: TextStyle(
           fontSize: 16,
