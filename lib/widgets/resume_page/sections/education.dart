@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jlaskowska/widgets/resume_page/sections/common/content_tile.dart';
 import 'package:jlaskowska/widgets/resume_page/sections/common/headline.dart';
 
 class Education extends StatelessWidget {
@@ -20,12 +21,10 @@ class Education extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(
-                    'SWPS University',
-                    style: TextStyle(fontSize: 15),
+                  ContentTile(
+                    title: 'Msc Clinical Psychology, SWPS.',
+                    subtitle: 'Expected June 2021',
                   ),
-                  Text('Master of Science in Clinical Psychology'),
-                  Text('expected June 2021', style: TextStyle(fontSize: 10)),
                 ],
               ),
             ],
