@@ -4,46 +4,39 @@ import 'package:jlaskowska/config/project_colors.dart';
 class ContentTile extends StatelessWidget {
   final String title;
   final String subtitle;
+  final IconData icon;
 
-  final Color backgroundColor;
-  final Color contentColor;
+  final Color iconColor;
 
   const ContentTile({
     @required this.title,
     @required this.subtitle,
-    this.backgroundColor = ProjectColors.lightBlack,
-    this.contentColor = Colors.white,
+    @required this.icon,
+    this.iconColor = ProjectColors.lightBlack,
     Key key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16.0),
-        color: backgroundColor,
+    return ListTile(
+      contentPadding: const EdgeInsets.all(0),
+      leading: Icon(
+        icon,
+        color: iconColor,
+        size: 40,
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Text(
-              title,
-              style: TextStyle(
-                fontSize: 14,
-                color: contentColor,
-              ),
-            ),
-            Text(
-              subtitle,
-              style: TextStyle(
-                fontSize: 10,
-                fontStyle: FontStyle.italic,
-                color: contentColor,
-              ),
-            ),
-          ],
+      title: Text(
+        title,
+        style: TextStyle(
+          color: ProjectColors.black,
+          fontSize: 12,
+        ),
+      ),
+      subtitle: Text(
+        subtitle,
+        style: TextStyle(
+          color: ProjectColors.darkGray,
+          fontSize: 10,
         ),
       ),
     );
