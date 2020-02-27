@@ -9,23 +9,23 @@ class Experience extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      color: Colors.grey,
+      // color: Colors.grey,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Headline('Experience'),
-          SizedBox(height: 8),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               ContentTile(
+                icon: Icons.local_hospital,
                 title: 'Psychological Assistant',
-                subtitle: 'Sept 2018 - Sept 2019, Berlin.',
+                subtitle: 'Sept. 2018 - Sept. 2019, Berlin',
               ),
-              SizedBox(height: 8),
               ContentTile(
-                title: 'Technical Support, AVM.',
-                subtitle: 'June 2015 - June 2017, Berlin.',
+                icon: Icons.build,
+                title: 'Technical Support',
+                subtitle: 'June 2015 - July 2017, Berlin',
               ),
             ],
           )
