@@ -15,9 +15,10 @@ class Projects extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Headline('Projects'),
+          SizedBox(height: 8),
           for (ProjectDataModel project in ResumeSettings.projects)
             Padding(
-              padding: const EdgeInsets.only(top: 8.0),
+              padding: const EdgeInsets.only(top: 16.0),
               child: _ProjectCard(
                 title: project.projectTitle,
                 bulletPoints: project.bulletPoints,

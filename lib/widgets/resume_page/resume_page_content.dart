@@ -24,7 +24,7 @@ class ResumePageContent extends StatelessWidget {
           // constraints: BoxConstraints.expand(),
           child: SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(24.0),
               child: DefaultTextStyle(
                 style: TextStyle(
                   fontFamily: 'Rubik',
@@ -66,11 +66,11 @@ class _PageStructure extends StatelessWidget {
                   Skills(),
                   SizedBox(height: 16),
                   Experience(),
-                  // SizedBox(height: 16),
+                  SizedBox(height: 8),
                   Education(),
-                  // SizedBox(height: 16),
+                  SizedBox(height: 8),
                   Languages(),
-                  SizedBox(height: 16),
+                  SizedBox(height: 24),
                   Hobbies(),
                 ],
               ),

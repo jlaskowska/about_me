@@ -12,12 +12,14 @@ class Languages extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Headline('Languages'),
-          SizedBox(height: 8),
+          SizedBox(height: 16),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               _LanguageIcon(language: 'EN'),
+              SizedBox(width: 32),
               _LanguageIcon(language: 'DE'),
+              SizedBox(width: 32),
               _LanguageIcon(language: 'PL'),
             ],
           ),

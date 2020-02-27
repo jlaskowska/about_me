@@ -12,25 +12,24 @@ class Hobbies extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Headline('Hobbies'),
-          SizedBox(height: 8),
+          SizedBox(height: 16),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               _HobbyIcon(
                 icon: Icons.palette,
-                color: ProjectColors.lightBlack,
               ),
+              SizedBox(width: 24),
               _HobbyIcon(
                 icon: Icons.theaters,
-                color: ProjectColors.lightBlack,
               ),
+              SizedBox(width: 24),
               _HobbyIcon(
                 icon: Icons.flight,
-                color: ProjectColors.lightBlack,
               ),
+              SizedBox(width: 24),
               _HobbyIcon(
                 icon: Icons.music_note,
-                color: ProjectColors.lightBlack,
               ),
             ],
           ),
@@ -48,7 +47,7 @@ class _HobbyIcon extends StatelessWidget {
   const _HobbyIcon({
     @required this.icon,
     this.size = 30,
-    this.color,
+    this.color = ProjectColors.lightBlack,
     Key key,
   }) : super(key: key);
 
