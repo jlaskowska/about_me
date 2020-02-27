@@ -16,7 +16,7 @@ class ResumePageContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 32.0),
+      padding: const EdgeInsets.only(top: 16.0),
       child: AspectRatio(
         aspectRatio: 0.7072,
         child: Container(
@@ -24,7 +24,7 @@ class ResumePageContent extends StatelessWidget {
           // constraints: BoxConstraints.expand(),
           child: SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(16.0),
               child: DefaultTextStyle(
                 style: TextStyle(
                   fontFamily: 'Rubik',
@@ -49,31 +49,28 @@ class _PageStructure extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         ContactInformation(),
-        SizedBox(height: 8),
+        SizedBox(height: 16),
         Summary(),
-        SizedBox(height: 8),
+        SizedBox(height: 16),
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Expanded(
               child: Projects(),
             ),
-            SizedBox(width: 8),
+            SizedBox(width: 16),
             Expanded(
               child: Column(
-                // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Skills(),
-                  SizedBox(height: 8),
-                  Conferences(),
-                  SizedBox(height: 8),
+                  SizedBox(height: 16),
                   Experience(),
-                  SizedBox(height: 8),
+                  // SizedBox(height: 16),
                   Education(),
-                  SizedBox(height: 8),
+                  // SizedBox(height: 16),
                   Languages(),
-                  SizedBox(height: 8),
+                  SizedBox(height: 16),
                   Hobbies(),
                 ],
               ),

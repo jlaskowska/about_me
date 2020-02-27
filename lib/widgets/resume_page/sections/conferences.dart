@@ -8,7 +8,6 @@ class Conferences extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      color: Colors.grey,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[

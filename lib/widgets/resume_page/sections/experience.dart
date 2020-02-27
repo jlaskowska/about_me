@@ -9,7 +9,6 @@ class Experience extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      // color: Colors.grey,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -24,7 +23,7 @@ class Experience extends StatelessWidget {
               ),
               ContentTile(
                 icon: Icons.build,
-                title: 'Technical Support',
+                title: 'Technical Support, AVM',
                 subtitle: 'June 2015 - July 2017, Berlin',
               ),
             ],

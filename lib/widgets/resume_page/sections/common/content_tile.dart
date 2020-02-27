@@ -36,6 +36,7 @@ class ContentTile extends StatelessWidget {
         subtitle,
         style: TextStyle(
           color: ProjectColors.darkGray,
+          fontStyle: FontStyle.italic,
           fontSize: 10,
         ),
       ),

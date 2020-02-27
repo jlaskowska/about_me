@@ -7,13 +7,11 @@ class Summary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey,
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: Text(
         ResumeSettings.summary,
         textAlign: TextAlign.justify,
         style: TextStyle(
-          fontSize: 16,
+          fontSize: 14,
           fontStyle: FontStyle.italic,
         ),
       ),

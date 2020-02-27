@@ -14,23 +14,25 @@ class Skills extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey,
       width: double.infinity,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Headline('Skills'),
           SizedBox(height: 8),
-          Wrap(
-            children: <Widget>[
-              for (int index = 0; index < ResumeSettings.skills.length; index++)
-                _SkillChip(
-                  backgroundColor: colors[index % colors.length],
-                  text: ResumeSettings.skills[index],
-                ),
-            ],
-            spacing: 8,
-            runSpacing: 8,
+          Container(
+            width: double.infinity,
+            child: Wrap(
+              children: <Widget>[
+                for (int index = 0; index < ResumeSettings.skills.length; index++)
+                  _SkillChip(
+                    backgroundColor: colors[index % colors.length],
+                    text: ResumeSettings.skills[index],
+                  ),
+              ],
+              spacing: 8,
+              runSpacing: 8,
+            ),
           ),
         ],
       ),
