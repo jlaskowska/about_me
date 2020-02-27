@@ -9,23 +9,17 @@ class Education extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      color: Colors.grey,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Headline('Education'),
-          SizedBox(height: 8),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  ContentTile(
-                    title: 'Msc Clinical Psychology, SWPS.',
-                    subtitle: 'Expected June 2021',
-                  ),
-                ],
+              ContentTile(
+                icon: Icons.local_library,
+                title: 'Msc Clinical Psychology, SWPS.',
+                subtitle: 'Expected June 2021',
               ),
             ],
           ),
