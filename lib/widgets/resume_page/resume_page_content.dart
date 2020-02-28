@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:jlaskowska/config/project_colors.dart';
-import 'package:jlaskowska/widgets/resume_page/sections/conferences.dart';
 import 'package:jlaskowska/widgets/resume_page/sections/contact_information.dart';
 import 'package:jlaskowska/widgets/resume_page/sections/education.dart';
 import 'package:jlaskowska/widgets/resume_page/sections/experience.dart';
@@ -24,7 +23,7 @@ class ResumePageContent extends StatelessWidget {
           // constraints: BoxConstraints.expand(),
           child: SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.all(24.0),
+              padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 32.0),
               child: DefaultTextStyle(
                 style: TextStyle(
                   fontFamily: 'Rubik',
@@ -49,9 +48,9 @@ class _PageStructure extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         ContactInformation(),
-        SizedBox(height: 16),
+        SizedBox(height: 24),
         Summary(),
-        SizedBox(height: 16),
+        SizedBox(height: 24),
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -64,11 +63,11 @@ class _PageStructure extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Skills(),
-                  SizedBox(height: 16),
+                  SizedBox(height: 24),
                   Experience(),
-                  SizedBox(height: 8),
+                  SizedBox(height: 16),
                   Education(),
-                  SizedBox(height: 8),
+                  SizedBox(height: 16),
                   Languages(),
                   SizedBox(height: 24),
                   Hobbies(),

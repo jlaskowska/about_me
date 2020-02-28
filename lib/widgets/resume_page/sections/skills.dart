@@ -59,7 +59,7 @@ class _SkillChip extends StatelessWidget {
       borderRadius: BorderRadius.circular(16.0),
       child: Container(
         color: backgroundColor,
-        padding: const EdgeInsets.all(8),
+        padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
@@ -67,14 +67,14 @@ class _SkillChip extends StatelessWidget {
               child: Icon(
                 Icons.check,
                 color: backgroundColor,
-                size: 18,
+                size: 14,
               ),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: foregroundColor,
               ),
             ),
-            SizedBox(width: 8),
+            SizedBox(width: 4),
             Center(
               child: Text(
                 text,

@@ -12,7 +12,7 @@ class ContactInformation extends StatelessWidget {
     return Container(
       height: 90,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Avatar(size: 90),
           SizedBox(width: 8),

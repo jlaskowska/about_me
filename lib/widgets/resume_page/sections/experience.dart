@@ -23,6 +23,7 @@ class Experience extends StatelessWidget {
               ),
               ContentTile(
                 icon: Icons.build,
+                iconSize: 34,
                 title: 'Technical Support, AVM',
                 subtitle: 'June 2015 - July 2017, Berlin',
               ),
