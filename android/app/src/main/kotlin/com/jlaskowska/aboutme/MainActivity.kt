@@ -1,4 +1,4 @@
-package com.jlaskowska.jlaskowska
+package com.jlaskowska.aboutme
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
