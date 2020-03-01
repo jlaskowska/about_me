@@ -19,9 +19,9 @@ class ResumePageContent extends StatelessWidget {
       builder: (_, orientation) => orientation == Orientation.landscape && kIsWeb
           ? _Landscape()
           : Center(
-              child: Text(
+              child: const Text(
                 'Coming soon!',
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 18,
                 ),
               ),
@@ -70,28 +70,28 @@ class _LandscapeContent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         ContactInformation(),
-        SizedBox(height: 24),
+        const SizedBox(height: 24),
         Summary(),
-        SizedBox(height: 24),
+        const SizedBox(height: 24),
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Expanded(
               child: Projects(),
             ),
-            SizedBox(width: 16),
+            const SizedBox(width: 16),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Skills(),
-                  SizedBox(height: 24),
+                  const SizedBox(height: 24),
                   Experience(),
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
                   Education(),
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
                   Languages(),
-                  SizedBox(height: 24),
+                  const SizedBox(height: 24),
                   Hobbies(),
                 ],
               ),

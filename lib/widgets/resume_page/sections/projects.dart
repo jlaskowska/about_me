@@ -15,7 +15,7 @@ class Projects extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Headline('Projects'),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           for (ProjectDataModel project in ResumeSettings.projects)
             Column(
               children: <Widget>[
@@ -24,7 +24,7 @@ class Projects extends StatelessWidget {
                   bulletPoints: project.bulletPoints,
                   assetPath: project.assetPath,
                 ),
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
               ],
             ),
         ],
@@ -52,7 +52,7 @@ class _ProjectCard extends StatelessWidget {
       children: <Widget>[
         Container(
           child: ListTile(
-            contentPadding: EdgeInsets.all(0),
+            contentPadding: const EdgeInsets.all(0),
             dense: true,
             leading: Image.asset(
               assetPath,
@@ -61,14 +61,14 @@ class _ProjectCard extends StatelessWidget {
             ),
             title: Text(
               title,
-              style: TextStyle(
-                color: Colors.black,
+              style: const TextStyle(
+                color: ProjectColors.black,
                 fontSize: 18,
               ),
             ),
           ),
         ),
-        Divider(
+        const Divider(
           color: ProjectColors.lightBlack,
           thickness: 1,
           height: 2,
@@ -80,27 +80,27 @@ class _ProjectCard extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
               for (String bp in bulletPoints)
                 Padding(
                   padding: const EdgeInsets.only(top: 8),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Icon(
+                      const Icon(
                         Icons.code,
                         size: 16,
                         color: ProjectColors.black,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 8,
                       ),
                       Expanded(
                         child: Text(
                           bp,
                           textAlign: TextAlign.left,
-                          style: TextStyle(
-                            color: Colors.black,
+                          style: const TextStyle(
+                            color: ProjectColors.black,
                             fontSize: 12,
                           ),
                         ),
@@ -108,7 +108,7 @@ class _ProjectCard extends StatelessWidget {
                     ],
                   ),
                 ),
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
             ],
           ),
         ),

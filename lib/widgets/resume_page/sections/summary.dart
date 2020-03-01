@@ -7,10 +7,10 @@ class Summary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text(
+      child: const Text(
         ResumeSettings.summary,
         textAlign: TextAlign.justify,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 14,
           fontStyle: FontStyle.italic,
         ),

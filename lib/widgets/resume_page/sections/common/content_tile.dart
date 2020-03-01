@@ -29,14 +29,14 @@ class ContentTile extends StatelessWidget {
       ),
       title: Text(
         title,
-        style: TextStyle(
+        style: const TextStyle(
           color: ProjectColors.black,
           fontSize: 12,
         ),
       ),
       subtitle: Text(
         subtitle,
-        style: TextStyle(
+        style: const TextStyle(
           color: ProjectColors.darkGray,
           fontStyle: FontStyle.italic,
           fontSize: 10,

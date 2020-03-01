@@ -20,13 +20,13 @@ class HomePageContent extends StatelessWidget {
                 scrollDirection: Axis.vertical,
                 child: Column(
                   children: <Widget>[
-                    SizedBox(height: 32),
+                    const SizedBox(height: 32),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
                         Avatar(size: 300),
-                        SizedBox(width: 128), // TODO would be good to be flexible
+                        const SizedBox(width: 128), // TODO would be good to be flexible
                         _AboutMe(),
                       ],
                     ),
@@ -41,9 +41,9 @@ class HomePageContent extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                SizedBox(height: 32),
+                const SizedBox(height: 32),
                 Avatar(size: 300),
-                SizedBox(height: 32), // TODO would be good to be flexible
+                const SizedBox(height: 32), // TODO would be good to be flexible
                 _AboutMe(),
               ],
             ),
@@ -64,13 +64,13 @@ class _AboutMe extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Text(
+        const Text(
           'Hi, I\'m',
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 60,
           ),
         ),
-        SizedBox(height: 24),
+        const SizedBox(height: 24),
         Text(
           PersonalInfo.name,
           textAlign: TextAlign.center,
@@ -79,14 +79,14 @@ class _AboutMe extends StatelessWidget {
             color: Theme.of(context).accentColor,
           ),
         ),
-        SizedBox(height: 24),
-        Text(
+        const SizedBox(height: 24),
+        const Text(
           PersonalInfo.position,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 30,
           ),
         ),
-        SizedBox(height: 16),
+        const SizedBox(height: 16),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -95,7 +95,7 @@ class _AboutMe extends StatelessWidget {
               size: 64,
               assetPath: 'assets/images/home_screen/linkedin.png',
             ),
-            SizedBox(width: 16),
+            const SizedBox(width: 16),
             ImageButton(
               onPressed: () async => await launch(PersonalInfo.gitHubUrl),
               size: 64,

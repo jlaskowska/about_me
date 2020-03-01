@@ -8,9 +8,9 @@ class PortfolioPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Webpage(
       content: Center(
-        child: Text(
+        child: const Text(
           'Coming soon!',
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 18,
           ),
         ),

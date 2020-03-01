@@ -12,14 +12,14 @@ class Languages extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Headline('Languages'),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               _LanguageIcon(language: 'EN'),
-              SizedBox(width: 32),
+              const SizedBox(width: 32),
               _LanguageIcon(language: 'DE'),
-              SizedBox(width: 32),
+              const SizedBox(width: 32),
               _LanguageIcon(language: 'PL'),
             ],
           ),
@@ -47,12 +47,12 @@ class _LanguageIcon extends StatelessWidget {
       child: Center(
         child: Text(
           language,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
           ),
         ),
       ),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         shape: BoxShape.circle,
         color: ProjectColors.lightBlack,
       ),

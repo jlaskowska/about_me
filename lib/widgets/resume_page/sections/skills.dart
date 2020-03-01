@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:jlaskowska/config/project_colors.dart';
 import 'package:jlaskowska/config/resume_settings.dart';
 import 'package:jlaskowska/widgets/resume_page/sections/common/headline.dart';
 
@@ -20,7 +19,7 @@ class Skills extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Headline('Skills'),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           Container(
             width: double.infinity,
             child: Wrap(
@@ -74,7 +73,7 @@ class _SkillChip extends StatelessWidget {
                 color: foregroundColor,
               ),
             ),
-            SizedBox(width: 4),
+            const SizedBox(width: 4),
             Center(
               child: Text(
                 text,

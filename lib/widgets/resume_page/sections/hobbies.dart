@@ -12,22 +12,22 @@ class Hobbies extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Headline('Hobbies'),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               _HobbyIcon(
                 icon: Icons.palette,
               ),
-              SizedBox(width: 24),
+              const SizedBox(width: 24),
               _HobbyIcon(
                 icon: Icons.theaters,
               ),
-              SizedBox(width: 24),
+              const SizedBox(width: 24),
               _HobbyIcon(
                 icon: Icons.flight,
               ),
-              SizedBox(width: 24),
+              const SizedBox(width: 24),
               _HobbyIcon(
                 icon: Icons.music_note,
               ),

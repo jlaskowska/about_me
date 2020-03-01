@@ -15,7 +15,7 @@ class ContactInformation extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Avatar(size: 90),
-          SizedBox(width: 8),
+          const SizedBox(width: 8),
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
@@ -29,21 +29,21 @@ class ContactInformation extends StatelessWidget {
                   ),
                 ),
               ),
-              Text(
+              const Text(
                 PersonalInfo.position,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 20,
                 ),
               ),
-              Text(
+              const Text(
                 PersonalInfo.city,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 16,
                 ),
               ),
             ],
           ),
-          SizedBox(width: 8),
+          const SizedBox(width: 8),
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
