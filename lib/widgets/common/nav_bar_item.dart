@@ -16,7 +16,9 @@ class NavBarItem extends StatelessWidget {
       onTap: () => Navigator.of(context).pushNamed(routeName),
       child: Text(
         title,
-        style: TextStyle(fontSize: 18),
+        style: const TextStyle(
+          fontSize: 18,
+        ),
       ),
     );
   }

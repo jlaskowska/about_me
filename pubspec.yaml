@@ -22,6 +22,8 @@ flutter:
   assets:
    - assets/images/home_screen/
    - assets/images/drawer/
+   - assets/images/resume/
+
 
   fonts:
     - family: Rubik

@@ -33,7 +33,7 @@ class NavigationDrawer extends StatelessWidget {
                     child: ListTile(
                       title: Text(
                         navBarItems[index].title,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 18,
                         ),
                       ),
