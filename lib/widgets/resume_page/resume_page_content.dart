@@ -1,14 +1,14 @@
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
-import 'package:jlaskowska/config/project_colors.dart';
-import 'package:jlaskowska/widgets/resume_page/sections/contact_information.dart';
-import 'package:jlaskowska/widgets/resume_page/sections/education.dart';
-import 'package:jlaskowska/widgets/resume_page/sections/experience.dart';
-import 'package:jlaskowska/widgets/resume_page/sections/hobbies.dart';
-import 'package:jlaskowska/widgets/resume_page/sections/languages.dart';
-import 'package:jlaskowska/widgets/resume_page/sections/projects.dart';
-import 'package:jlaskowska/widgets/resume_page/sections/skills.dart';
-import 'package:jlaskowska/widgets/resume_page/sections/summary.dart';
+import 'package:about_me/config/project_colors.dart';
+import 'package:about_me/widgets/resume_page/sections/contact_information.dart';
+import 'package:about_me/widgets/resume_page/sections/education.dart';
+import 'package:about_me/widgets/resume_page/sections/experience.dart';
+import 'package:about_me/widgets/resume_page/sections/hobbies.dart';
+import 'package:about_me/widgets/resume_page/sections/languages.dart';
+import 'package:about_me/widgets/resume_page/sections/projects.dart';
+import 'package:about_me/widgets/resume_page/sections/skills.dart';
+import 'package:about_me/widgets/resume_page/sections/summary.dart';
 
 class ResumePageContent extends StatelessWidget {
   const ResumePageContent({Key key}) : super(key: key);

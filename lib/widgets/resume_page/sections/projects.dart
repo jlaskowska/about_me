@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:jlaskowska/config/project_colors.dart';
-import 'package:jlaskowska/config/resume_settings.dart';
-import 'package:jlaskowska/models/project_data_model.dart';
-import 'package:jlaskowska/widgets/resume_page/sections/common/headline.dart';
+import 'package:about_me/config/project_colors.dart';
+import 'package:about_me/config/resume_settings.dart';
+import 'package:about_me/models/project_data_model.dart';
+import 'package:about_me/widgets/resume_page/sections/common/headline.dart';
 
 class Projects extends StatelessWidget {
   const Projects({Key key}) : super(key: key);

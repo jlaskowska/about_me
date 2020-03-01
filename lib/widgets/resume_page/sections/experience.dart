@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:jlaskowska/widgets/resume_page/sections/common/content_tile.dart';
-import 'package:jlaskowska/widgets/resume_page/sections/common/headline.dart';
+import 'package:about_me/widgets/resume_page/sections/common/content_tile.dart';
+import 'package:about_me/widgets/resume_page/sections/common/headline.dart';
 
 class Experience extends StatelessWidget {
   const Experience({Key key}) : super(key: key);

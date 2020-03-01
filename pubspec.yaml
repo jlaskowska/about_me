@@ -1,5 +1,5 @@
-name: jlaskowska
-description: The personal website and app for Joanna Laskowska.
+name: about_me
+description: A personal website and app about Joanna Laskowska.
 version: 0.1.0+1
 
 environment:

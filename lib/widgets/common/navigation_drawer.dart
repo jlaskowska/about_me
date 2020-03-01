@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:jlaskowska/config/project_colors.dart';
-import 'package:jlaskowska/models/navigation_item_data_model.dart';
+import 'package:about_me/config/project_colors.dart';
+import 'package:about_me/models/navigation_item_data_model.dart';
 
 class NavigationDrawer extends StatelessWidget {
   const NavigationDrawer({Key key}) : super(key: key);
