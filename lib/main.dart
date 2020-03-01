@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:jlaskowska/config/project_colors.dart';
-import 'package:jlaskowska/config/route_names.dart';
-import 'package:jlaskowska/widgets/home_page/home_page.dart';
-import 'package:jlaskowska/widgets/portfolio_page/portfolio_page.dart';
-import 'package:jlaskowska/widgets/resume_page/resume_page.dart';
+import 'package:about_me/config/project_colors.dart';
+import 'package:about_me/config/route_names.dart';
+import 'package:about_me/widgets/home_page/home_page.dart';
+import 'package:about_me/widgets/portfolio_page/portfolio_page.dart';
+import 'package:about_me/widgets/resume_page/resume_page.dart';
 
 void main() => runApp(MyApp());
 

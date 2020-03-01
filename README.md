@@ -1,3 +1,3 @@
-# jlaskowska
+# about_me
 
-The personal website and app for Joanna Laskowska.
+A personal website and app about Joanna Laskowska.

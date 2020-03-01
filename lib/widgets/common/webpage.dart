@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:jlaskowska/widgets/common/navigation_bar.dart';
-import 'package:jlaskowska/widgets/common/navigation_drawer.dart';
+import 'package:about_me/widgets/common/navigation_bar.dart';
+import 'package:about_me/widgets/common/navigation_drawer.dart';
 
 class Webpage extends StatelessWidget {
   final Widget content;

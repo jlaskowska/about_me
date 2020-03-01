@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:jlaskowska/widgets/resume_page/sections/common/content_tile.dart';
-import 'package:jlaskowska/widgets/resume_page/sections/common/headline.dart';
+import 'package:about_me/widgets/resume_page/sections/common/content_tile.dart';
+import 'package:about_me/widgets/resume_page/sections/common/headline.dart';
 
 class Education extends StatelessWidget {
   const Education({Key key}) : super(key: key);

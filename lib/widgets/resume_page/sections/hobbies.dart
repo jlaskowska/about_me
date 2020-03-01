@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:jlaskowska/config/project_colors.dart';
-import 'package:jlaskowska/widgets/resume_page/sections/common/headline.dart';
+import 'package:about_me/config/project_colors.dart';
+import 'package:about_me/widgets/resume_page/sections/common/headline.dart';
 
 class Hobbies extends StatelessWidget {
   const Hobbies({Key key}) : super(key: key);

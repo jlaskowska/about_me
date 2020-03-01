@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jlaskowska/widgets/common/webpage.dart';
+import 'package:about_me/widgets/common/webpage.dart';
 
 class PortfolioPage extends StatelessWidget {
   const PortfolioPage({Key key}) : super(key: key);

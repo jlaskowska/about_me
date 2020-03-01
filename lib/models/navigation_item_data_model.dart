@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:jlaskowska/config/route_names.dart';
+import 'package:about_me/config/route_names.dart';
 
 class NavigationItemDataModel {
   final String title;

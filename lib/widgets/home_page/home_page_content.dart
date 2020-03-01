@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:jlaskowska/config/personal_info.dart';
-import 'package:jlaskowska/widgets/common/avatar.dart';
-import 'package:jlaskowska/widgets/common/image_button.dart';
+import 'package:about_me/config/personal_info.dart';
+import 'package:about_me/widgets/common/avatar.dart';
+import 'package:about_me/widgets/common/image_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomePageContent extends StatelessWidget {

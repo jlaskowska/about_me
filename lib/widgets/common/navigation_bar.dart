@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:jlaskowska/models/navigation_item_data_model.dart';
-import 'package:jlaskowska/widgets/common/custom_icon_button.dart';
-import 'package:jlaskowska/widgets/common/nav_bar_item.dart';
+import 'package:about_me/models/navigation_item_data_model.dart';
+import 'package:about_me/widgets/common/custom_icon_button.dart';
+import 'package:about_me/widgets/common/nav_bar_item.dart';
 
 class NavigationBar extends StatelessWidget {
   final Orientation orientation;

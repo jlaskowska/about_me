@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:jlaskowska/config/resume_settings.dart';
-import 'package:jlaskowska/widgets/resume_page/sections/common/headline.dart';
+import 'package:about_me/config/resume_settings.dart';
+import 'package:about_me/widgets/resume_page/sections/common/headline.dart';
 
 class Skills extends StatelessWidget {
   const Skills({Key key}) : super(key: key);

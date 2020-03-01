@@ -1,4 +1,4 @@
-import 'package:jlaskowska/models/project_data_model.dart';
+import 'package:about_me/models/project_data_model.dart';
 
 class ResumeSettings {
   static const summary =
