@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:jlaskowska/config/project_colors.dart';
 import 'package:jlaskowska/widgets/resume_page/sections/contact_information.dart';
@@ -14,13 +15,34 @@ class ResumePageContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return OrientationBuilder(
+      builder: (_, orientation) => orientation == Orientation.landscape && kIsWeb
+          ? _Landscape()
+          : Center(
+              child: Text(
+                'Coming soon!',
+                style: TextStyle(
+                  fontSize: 18,
+                ),
+              ),
+            ),
+    );
+  }
+}
+
+class _Landscape extends StatelessWidget {
+  const _Landscape({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 16.0),
       child: AspectRatio(
         aspectRatio: 0.7072,
         child: Container(
           color: Colors.white,
-          // constraints: BoxConstraints.expand(),
           child: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 32.0),
@@ -29,7 +51,7 @@ class ResumePageContent extends StatelessWidget {
                   fontFamily: 'Rubik',
                   color: ProjectColors.black,
                 ),
-                child: _PageStructure(),
+                child: _LandscapeContent(),
               ),
             ),
           ),
@@ -39,8 +61,8 @@ class ResumePageContent extends StatelessWidget {
   }
 }
 
-class _PageStructure extends StatelessWidget {
-  const _PageStructure({Key key}) : super(key: key);
+class _LandscapeContent extends StatelessWidget {
+  const _LandscapeContent({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
