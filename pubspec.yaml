@@ -23,6 +23,7 @@ flutter:
    - assets/images/common/
    - assets/images/home_screen/
    - assets/images/drawer/
+   - assets/images/portfolio/aboutme/
    - assets/images/portfolio/todo/
 
   fonts:

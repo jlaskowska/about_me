@@ -6,7 +6,11 @@ class PortfolioSettings {
       title: 'About Me',
       description: '',
       iconAssetPath: 'assets/images/common/aboutme_app_icon.png',
-      screenshotAssetPaths: [],
+      screenshotAssetPaths: [
+        'assets/images/portfolio/aboutme/01.png',
+        'assets/images/portfolio/aboutme/02.png',
+        'assets/images/portfolio/aboutme/03.png',
+      ],
     ),
     PortfolioProjectsModel(
       title: 'Todo',
@@ -36,7 +40,7 @@ class PortfolioSettings {
     PortfolioProjectsModel(
       title: 'Quiz',
       description:
-          'A fun quiz application where the user is presented a series of questions and must answer either true or false. Each game consists of ten questions (taken from opentdb.com\'s API), with the result displayed afterwards setState is used as the project\'s state management solution.',
+          'A fun quiz application where the user is presented a series of questions and must answer either true or false. Each game consists of ten questions (taken from opentdb.com\'s API), with the result displayed afterwards. setState is used as the project\'s state management solution.',
       iconAssetPath: 'assets/images/common/quiz_app_icon.png',
       screenshotAssetPaths: [],
     ),
