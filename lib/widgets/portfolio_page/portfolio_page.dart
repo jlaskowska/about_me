@@ -33,7 +33,7 @@ class _PortfolioContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Wrap(
-      alignment: WrapAlignment.start,
+      alignment: WrapAlignment.center,
       runAlignment: WrapAlignment.start,
       spacing: 64,
       runSpacing: 64,
@@ -77,35 +77,41 @@ class _PortfolioTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        child: Column(
-          children: <Widget>[
-            Image.asset(
-              assetPath,
-              height: 150,
-              width: 150,
+    return LayoutBuilder(
+      builder: (_, constraints) {
+        final size = constraints.maxWidth < 340 ? 120.0 : 150.0;
+
+        return GestureDetector(
+          onTap: onTap,
+          child: Container(
+            child: Column(
+              children: <Widget>[
+                Image.asset(
+                  assetPath,
+                  height: size,
+                  width: size,
+                ),
+                SizedBox(
+                  height: 8,
+                ),
+                Text(
+                  title,
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+              ],
             ),
-            SizedBox(
-              height: 8,
-            ),
-            Text(
-              title,
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
-          ],
-        ),
-      ),
+          ),
+        );
+      },
     );
   }
 }
 
 class _ProjectSheet extends StatelessWidget {
   static const _padding = 32.0;
-  static const _titleFontSize = 48;
+  static const _titleFontSize = 48.0;
   static const _desciptionTextWidth = 400.0;
   static const _imageWidth = 300.0;
 
@@ -191,7 +197,7 @@ class _ProjectSheet extends StatelessWidget {
                         ),
                       ],
                     ),
-                    if (numberOfImagesToShow > 0)
+                    if (kIsWeb && numberOfImagesToShow > 0)
                       Expanded(
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
