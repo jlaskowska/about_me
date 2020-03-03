@@ -51,6 +51,7 @@ class _PortfolioContent extends StatelessWidget {
                 child: _ProjectSheet(
                   title: project.title,
                   description: project.description,
+                  imageAssetPaths: project.screenshotAssetPaths,
                 ),
               ),
             ),
@@ -103,16 +104,19 @@ class _PortfolioTile extends StatelessWidget {
 class _ProjectSheet extends StatelessWidget {
   final String title;
   final String description;
+  final List<String> imageAssetPaths;
 
   const _ProjectSheet({
     @required this.title,
     @required this.description,
+    @required this.imageAssetPaths,
     Key key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.all(32.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -121,7 +125,7 @@ class _ProjectSheet extends StatelessWidget {
               Icons.arrow_back,
               color: Theme.of(context).accentColor,
             ),
-            onPressed: () {},
+            onPressed: () => Navigator.of(context).pop(),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -129,28 +133,48 @@ class _ProjectSheet extends StatelessWidget {
             children: <Widget>[
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
+                  SizedBox(height: 48),
                   Text(
                     title,
                     style: TextStyle(
-                      fontSize: 25,
+                      fontSize: 48,
                       fontWeight: FontWeight.bold,
                       color: ProjectColors.lightBlack,
                     ),
                   ),
-                  SizedBox(height: 4),
-                  Text(
-                    description,
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: ProjectColors.darkGray,
+                  SizedBox(height: 32),
+                  Container(
+                    width: 400,
+                    child: Text(
+                      description,
+                      textAlign: TextAlign.justify,
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: ProjectColors.lightBlack,
+                      ),
+                      maxLines: 50,
                     ),
                   ),
                 ],
               ),
-              Placeholder(fallbackHeight: 650, fallbackWidth: 300),
-              Placeholder(fallbackHeight: 650, fallbackWidth: 300),
-              Placeholder(fallbackHeight: 650, fallbackWidth: 300),
+              Expanded(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    if (imageAssetPaths.length == 0)
+                      for (final _ in [0, 1, 2]) Placeholder(fallbackHeight: 650, fallbackWidth: 300),
+                    if (imageAssetPaths.length != 0)
+                      for (String assetPath in imageAssetPaths)
+                        Image.asset(
+                          assetPath,
+                          width: 300,
+                        ),
+                  ],
+                ),
+              ),
             ],
           ),
         ],
