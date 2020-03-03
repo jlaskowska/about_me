@@ -23,7 +23,7 @@ flutter:
    - assets/images/common/
    - assets/images/home_screen/
    - assets/images/drawer/
-
+   - assets/images/portfolio/todo/
 
   fonts:
     - family: Rubik
