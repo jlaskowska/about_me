@@ -12,14 +12,16 @@ class PortfolioPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Webpage(
-      content: OrientationBuilder(
-        builder: (_, orientation) => SingleChildScrollView(
-          child: Column(
-            children: <Widget>[
-              SizedBox(height: 64), //TODO calculate somehow depending on height of _LandscapePortfolioContent ?
-              _PortfolioContent(),
-            ],
+    return OrientationBuilder(
+      builder: (_, orientation) => Webpage(
+        content: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              children: <Widget>[
+                SizedBox(height: 64), //TODO calculate somehow depending on height of _LandscapePortfolioContent ?
+                _PortfolioContent(orientation: orientation),
+              ],
+            ),
           ),
         ),
       ),
@@ -28,12 +30,14 @@ class PortfolioPage extends StatelessWidget {
 }
 
 class _PortfolioContent extends StatelessWidget {
-  const _PortfolioContent({Key key}) : super(key: key);
+  final Orientation orientation;
+
+  const _PortfolioContent({@required this.orientation, Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Wrap(
-      alignment: WrapAlignment.center,
+      alignment: orientation == Orientation.landscape ? WrapAlignment.start : WrapAlignment.center,
       runAlignment: WrapAlignment.start,
       spacing: 64,
       runSpacing: 64,
