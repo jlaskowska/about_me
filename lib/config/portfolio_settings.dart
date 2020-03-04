@@ -4,7 +4,8 @@ class PortfolioSettings {
   static const projects = const [
     PortfolioProjectsModel(
       title: 'About Me',
-      description: '',
+      description:
+          'Personal website and mobile application containing my ré­su­mé as well as projects made using Flutter. Responsive design, optimized for multiple devices, screen sizes and orientations. Thus content is shown based on the space available while behavior is adaptive across platforms, e.g. displays mouse hand on web or inkwell button on mobile. The ré­su­mé is particularly noteworthy as it was created using 100% Flutter code.',
       iconAssetPath: 'assets/images/common/aboutme_app_icon.png',
       screenshotAssetPaths: [
         'assets/images/portfolio/aboutme/01.png',

@@ -46,7 +46,7 @@ class _PortfolioContent extends StatelessWidget {
               isScrollControlled: true,
               backgroundColor: ProjectColors.almostWhite,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(30.0),
+                borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0)),
               ),
               context: context,
               builder: (_) => SingleChildScrollView(
