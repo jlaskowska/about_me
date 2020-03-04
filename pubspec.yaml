@@ -24,7 +24,11 @@ flutter:
    - assets/images/home_screen/
    - assets/images/drawer/
    - assets/images/portfolio/aboutme/
+   - assets/images/portfolio/questionnaires/
+   - assets/images/portfolio/quiz/
+   - assets/images/portfolio/signup/
    - assets/images/portfolio/todo/
+   - assets/images/portfolio/weather/
 
   fonts:
     - family: Rubik
