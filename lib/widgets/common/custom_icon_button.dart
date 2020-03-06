@@ -1,8 +1,10 @@
+import 'package:about_me/widgets/common/adaptive_button.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class CustomIconButton extends StatelessWidget {
   final IconData icon;
-  final Function() onPressed;
+  final void Function() onPressed;
 
   const CustomIconButton({
     @required this.icon,
@@ -12,9 +14,16 @@ class CustomIconButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      child: Icon(icon),
-      onTap: onPressed,
-    );
+    final iconWidget = Icon(icon);
+
+    return kIsWeb
+        ? AdaptiveButton(
+            child: iconWidget,
+            onPressed: onPressed,
+          )
+        : IconButton(
+            icon: iconWidget,
+            onPressed: onPressed,
+          );
   }
 }
