@@ -1,6 +1,8 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:about_me/config/project_colors.dart';
 import 'package:about_me/models/navigation_item_data_model.dart';
+import 'package:about_me/extensions/hover_extensions.dart';
 
 class NavigationDrawer extends StatelessWidget {
   const NavigationDrawer({Key key}) : super(key: key);
@@ -8,16 +10,11 @@ class NavigationDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
-      builder: (context, constraints) {
+      builder: (_, constraints) {
         final width = constraints.maxWidth * 0.66;
         return Container(
           width: width,
-          decoration: BoxDecoration(
-            color: Theme.of(context).primaryColor,
-            boxShadow: [
-              BoxShadow(color: Colors.black12, blurRadius: 16),
-            ],
-          ),
+          color: Theme.of(context).primaryColor,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -25,21 +22,29 @@ class NavigationDrawer extends StatelessWidget {
               Expanded(
                 child: ListView.builder(
                   itemCount: navBarItems.length,
-                  itemBuilder: (_, index) => Padding(
-                    padding: const EdgeInsets.only(
-                      left: 32.0,
-                      top: 30.0,
-                    ),
-                    child: ListTile(
-                      title: Text(
-                        navBarItems[index].title,
-                        style: const TextStyle(
-                          fontSize: 18,
+                  itemBuilder: (_, index) {
+                    final widget = ListTile(
+                      contentPadding: EdgeInsets.all(0),
+                      dense: true,
+                      title: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 24),
+                        child: Text(
+                          navBarItems[index].title,
+                          style: const TextStyle(
+                            fontSize: 18,
+                          ),
                         ),
                       ),
                       onTap: () => Navigator.of(context).pushNamed(navBarItems[index].routeName),
-                    ),
-                  ),
+                    );
+
+                    return kIsWeb
+                        ? widget.showCursorOnHover
+                        : Material(
+                            color: Colors.transparent,
+                            child: widget,
+                          );
+                  },
                 ),
               ),
             ],
