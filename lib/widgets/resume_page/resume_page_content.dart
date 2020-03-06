@@ -17,45 +17,45 @@ class ResumePageContent extends StatelessWidget {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
 
-    return OrientationBuilder(
-      builder: (_, orientation) => orientation == Orientation.landscape && kIsWeb && height > 792
-          ? _Landscape()
-          : Center(
-              child: const Text(
-                'Coming soon!',
-                style: const TextStyle(
-                  fontSize: 18,
-                ),
-              ),
-            ),
+    return Padding(
+      padding: const EdgeInsets.only(top: 16.0),
+      child: OrientationBuilder(
+        builder: (_, orientation) {
+          bool showLandscape = orientation == Orientation.landscape && kIsWeb && height > 792;
+          return showLandscape
+              ? AspectRatio(
+                  aspectRatio: 0.7072,
+                  child: _Background(
+                    content: _LandscapeContent(),
+                  ),
+                )
+              : _Background(
+                  content: _PortraitContent(),
+                );
+        },
+      ),
     );
   }
 }
 
-class _Landscape extends StatelessWidget {
-  const _Landscape({
-    Key key,
-  }) : super(key: key);
+class _Background extends StatelessWidget {
+  final Widget content;
+
+  const _Background({@required this.content, Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 16.0),
-      child: AspectRatio(
-        aspectRatio: 0.7072,
-        child: Container(
-          color: Colors.white,
-          child: SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 32.0),
-              child: DefaultTextStyle(
-                style: TextStyle(
-                  fontFamily: 'Rubik',
-                  color: ProjectColors.black,
-                ),
-                child: _LandscapeContent(),
-              ),
+    return Container(
+      color: Colors.white,
+      child: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 32.0),
+          child: DefaultTextStyle(
+            style: TextStyle(
+              fontFamily: 'Rubik',
+              color: ProjectColors.black,
             ),
+            child: content,
           ),
         ),
       ),
@@ -100,6 +100,37 @@ class _LandscapeContent extends StatelessWidget {
             ),
           ],
         ),
+      ],
+    );
+  }
+}
+
+class _PortraitContent extends StatelessWidget {
+  const _PortraitContent({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: <Widget>[
+        FittedBox(
+          fit: BoxFit.scaleDown,
+          child: ContactInformation(),
+        ),
+        const SizedBox(height: 16),
+        Summary(),
+        const SizedBox(height: 16),
+        Projects(),
+        const SizedBox(width: 16),
+        Skills(),
+        const SizedBox(height: 24),
+        Experience(),
+        const SizedBox(height: 16),
+        Education(),
+        const SizedBox(height: 16),
+        Languages(),
+        const SizedBox(height: 24),
+        Hobbies(),
       ],
     );
   }
