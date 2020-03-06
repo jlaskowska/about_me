@@ -28,7 +28,7 @@ class ResumeSettings {
         'Adaptive behavior per platform, e.g. mouse hand on web, inkwell button on mobile.',
         'By reading this ré­su­mé you are interacting with Flutter code!',
       ],
-      assetPath: 'assets/images/resume/aboutme_app_icon.png',
+      assetPath: 'assets/images/common/aboutme_app_icon.png',
     ),
     ProjectDataModel(
       projectTitle: 'Todo',
@@ -39,7 +39,7 @@ class ResumeSettings {
         'Localized into three languages.',
         'Displays animated chart of completed tasks.',
       ],
-      assetPath: 'assets/images/resume/todo_app_icon.png',
+      assetPath: 'assets/images/common/todo_app_icon.png',
     ),
     ProjectDataModel(
       projectTitle: 'Signup',
@@ -49,7 +49,7 @@ class ResumeSettings {
         'Implementation powered by Firebase.',
         'Unique background design achieved using custom drawn shapes and curves.',
       ],
-      assetPath: 'assets/images/resume/signup_app_icon.png',
+      assetPath: 'assets/images/common/signup_app_icon.png',
     )
   ];
 }
