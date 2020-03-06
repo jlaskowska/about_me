@@ -10,46 +10,51 @@ class HomePageContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OrientationBuilder(
-      builder: (_, orientation) {
-        if (orientation == Orientation.landscape) {
-          // HACK in extreme cases, the content may need to be scrollable in both directions, does not seem to be a widget for this
-          return SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Center(
-              child: SingleChildScrollView(
-                scrollDirection: Axis.vertical,
-                child: Column(
-                  children: <Widget>[
-                    const SizedBox(height: 32),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        Avatar(size: 300),
-                        const SizedBox(width: 128), // TODO would be good to be flexible
-                        _AboutMe(),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          );
-        } else {
-          return SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                const SizedBox(height: 32),
-                Avatar(size: 300),
-                const SizedBox(height: 32), // TODO would be good to be flexible
-                _AboutMe(),
-              ],
-            ),
-          );
-        }
-      },
+      builder: (_, orientation) => FittedBox(
+        fit: BoxFit.scaleDown,
+        child: orientation == Orientation.landscape ? _Landscape() : _Portrait(),
+      ),
+    );
+  }
+}
+
+class _Landscape extends StatelessWidget {
+  const _Landscape({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        children: <Widget>[
+          const SizedBox(height: 32),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Avatar(size: 300),
+              const SizedBox(width: 128),
+              _AboutMe(),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _Portrait extends StatelessWidget {
+  const _Portrait({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: <Widget>[
+        const SizedBox(height: 32),
+        Avatar(size: 300),
+        const SizedBox(height: 32),
+        _AboutMe(),
+      ],
     );
   }
 }
