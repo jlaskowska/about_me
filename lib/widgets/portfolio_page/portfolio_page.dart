@@ -2,7 +2,9 @@ import 'dart:math';
 
 import 'package:about_me/config/portfolio_settings.dart';
 import 'package:about_me/config/project_colors.dart';
+import 'package:about_me/extensions/hover_extensions.dart';
 import 'package:about_me/models/portfolio_projects_model.dart';
+import 'package:about_me/widgets/common/custom_icon_button.dart';
 import 'package:about_me/widgets/common/webpage.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -50,7 +52,10 @@ class _PortfolioContent extends StatelessWidget {
               isScrollControlled: true,
               backgroundColor: ProjectColors.almostWhite,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0)),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(30.0),
+                  topRight: Radius.circular(30.0),
+                ),
               ),
               context: context,
               builder: (_) => SingleChildScrollView(
@@ -85,7 +90,7 @@ class _PortfolioTile extends StatelessWidget {
       builder: (_, constraints) {
         final size = constraints.maxWidth < 340 ? 120.0 : 150.0;
 
-        return GestureDetector(
+        final widget = GestureDetector(
           onTap: onTap,
           child: Container(
             child: Column(
@@ -108,6 +113,8 @@ class _PortfolioTile extends StatelessWidget {
             ),
           ),
         );
+
+        return kIsWeb ? widget.showCursorOnHover : widget;
       },
     );
   }
@@ -155,72 +162,85 @@ class _ProjectSheet extends StatelessWidget {
         final titleFontSize = scale * _titleFontSize;
 
         return SafeArea(
-          child: Container(
-            padding: EdgeInsets.all(_padding),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                if (kIsWeb)
-                  IconButton(
-                    icon: Icon(
-                      Icons.arrow_back,
+          child: Stack(
+            children: <Widget>[
+              if (!kIsWeb)
+                Positioned(
+                  right: _padding,
+                  top: _padding,
+                  child: GestureDetector(
+                    child: Icon(
+                      Icons.close,
                       color: Theme.of(context).accentColor,
                     ),
-                    onPressed: () => Navigator.of(context).pop(),
+                    onTap: () => Navigator.of(context).pop(),
                   ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                ),
+              Container(
+                padding: EdgeInsets.all(_padding),
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Column(
+                    if (kIsWeb)
+                      CustomIconButton(
+                        icon: Icons.arrow_back,
+                        onPressed: () => Navigator.of(context).pop(),
+                        color: Theme.of(context).accentColor,
+                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        if (kIsWeb) SizedBox(height: 48),
-                        Text(
-                          title,
-                          style: TextStyle(
-                            // fontSize: 48,
-                            fontSize: titleFontSize,
-                            fontWeight: FontWeight.bold,
-                            color: ProjectColors.lightBlack,
-                          ),
-                        ),
-                        SizedBox(height: 32),
-                        Container(
-                          width: desciptionTextWidth,
-                          child: Text(
-                            description,
-                            textAlign: TextAlign.justify,
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: ProjectColors.lightBlack,
-                            ),
-                            maxLines: 50,
-                          ),
-                        ),
-                      ],
-                    ),
-                    if (kIsWeb && numberOfImagesToShow > 0)
-                      Expanded(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          crossAxisAlignment: CrossAxisAlignment.center,
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
                           children: <Widget>[
-                            for (int i = 0; i < numberOfImagesToShow; i++)
-                              imageAssetPaths.length > i
-                                  ? Image.asset(
-                                      imageAssetPaths[i],
-                                      width: _imageWidth,
-                                    )
-                                  : Placeholder(fallbackHeight: 650, fallbackWidth: _imageWidth)
+                            if (kIsWeb) SizedBox(height: 48),
+                            Text(
+                              title,
+                              style: TextStyle(
+                                fontSize: titleFontSize,
+                                fontWeight: FontWeight.bold,
+                                color: ProjectColors.lightBlack,
+                              ),
+                            ),
+                            SizedBox(height: 32),
+                            Container(
+                              width: desciptionTextWidth,
+                              child: Text(
+                                description,
+                                textAlign: TextAlign.justify,
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: ProjectColors.lightBlack,
+                                ),
+                                maxLines: 50,
+                              ),
+                            ),
                           ],
                         ),
-                      ),
+                        if (kIsWeb && numberOfImagesToShow > 0)
+                          Expanded(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: <Widget>[
+                                for (int i = 0; i < numberOfImagesToShow; i++)
+                                  imageAssetPaths.length > i
+                                      ? Image.asset(
+                                          imageAssetPaths[i],
+                                          width: _imageWidth,
+                                        )
+                                      : Placeholder(fallbackHeight: 650, fallbackWidth: _imageWidth)
+                              ],
+                            ),
+                          ),
+                      ],
+                    ),
                   ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         );
       },
