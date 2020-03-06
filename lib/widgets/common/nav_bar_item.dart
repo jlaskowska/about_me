@@ -1,3 +1,4 @@
+import 'package:about_me/widgets/common/adaptive_button.dart';
 import 'package:flutter/material.dart';
 
 class NavBarItem extends StatelessWidget {
@@ -12,14 +13,14 @@ class NavBarItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => Navigator.of(context).pushNamed(routeName),
+    return AdaptiveButton(
       child: Text(
         title,
         style: const TextStyle(
           fontSize: 18,
         ),
       ),
+      onPressed: () => Navigator.of(context).pushNamed(routeName),
     );
   }
 }
