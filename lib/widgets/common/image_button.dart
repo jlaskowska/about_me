@@ -1,8 +1,10 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:about_me/extensions/hover_extensions.dart';
 
 /// A square image which is clickable
 class ImageButton extends StatelessWidget {
-  final Function() onPressed;
+  final void Function() onPressed;
   final double size;
   final String assetPath;
 
@@ -15,13 +17,15 @@ class ImageButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    final widget = GestureDetector(
+      onTap: onPressed,
       child: Image.asset(
         assetPath,
         width: size,
         height: size,
       ),
-      onTap: onPressed,
     );
+
+    return kIsWeb ? widget.showCursorOnHover : widget;
   }
 }

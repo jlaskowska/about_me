@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
         accentColor: ProjectColors.pink,
         fontFamily: 'Rubik',
+        splashColor: ProjectColors.pink,
       ),
       routes: {
         RouteNames.home: (_) => HomePage(),

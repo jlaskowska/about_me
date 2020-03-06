@@ -15,7 +15,7 @@ class NavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: kIsWeb ? 80 : 20,
+      height: kIsWeb ? 80 : 36,
       child: orientation == Orientation.landscape ? _NavBarLandscape() : _NavBarPortrait(),
     );
   }
