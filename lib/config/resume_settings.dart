@@ -2,7 +2,7 @@ import 'package:about_me/models/project_data_model.dart';
 
 class ResumeSettings {
   static const summary =
-      'Self-taught Flutter developer with six-months experience of building elegant mobile applications. Results-driven problem solver who writes robust code and is passionate about testing. Quick learner looking for new challenges in an agile team environment.';
+      'Flutter developer with eight-months experience building elegant mobile applications. Results-driven problem solver who writes robust code and is passionate about testing. Quick learner looking for new challenges in an agile team environment.';
 
   static const skills = const [
     'Dart',
@@ -14,9 +14,9 @@ class ResumeSettings {
     'UI/UX',
     'Jira',
     'Xcode',
-    'UML',
+    'Java',
     'Firebase',
-    'Testing',
+    'Swift',
   ];
 
   static const List<ProjectDataModel> projects = const [
@@ -26,7 +26,6 @@ class ResumeSettings {
         'Personal website and mobile application.',
         'Responsive design, optimized for multiple devices, screen sizes and orientations.',
         'Adaptive behavior per platform, e.g. mouse hand on web, inkwell button on mobile.',
-        'By reading this ré­su­mé you are interacting with Flutter code!',
       ],
       assetPath: 'assets/images/common/aboutme_app_icon.png',
     ),
@@ -52,4 +51,6 @@ class ResumeSettings {
       assetPath: 'assets/images/common/signup_app_icon.png',
     )
   ];
+
+  static const footnote = 'By reading this ré­su­mé you are interacting with Flutter code!';
 }

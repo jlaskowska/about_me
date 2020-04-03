@@ -17,8 +17,13 @@ class Experience extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               ContentTile(
+                icon: Icons.code,
+                title: 'Flutter Developer',
+                subtitle: 'Sept. 2019 - present, Berlin',
+              ),
+              ContentTile(
                 icon: Icons.local_hospital,
-                title: 'Psychological Assistant',
+                title: 'Neuropsychology Assistant',
                 subtitle: 'Sept. 2018 - Sept. 2019, Berlin',
               ),
               ContentTile(

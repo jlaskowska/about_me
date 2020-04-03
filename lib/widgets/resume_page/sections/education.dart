@@ -18,7 +18,7 @@ class Education extends StatelessWidget {
             children: <Widget>[
               ContentTile(
                 icon: Icons.local_library,
-                title: 'Msc Clinical Psychology',
+                title: 'Computational Neuropsychology',
                 subtitle: 'Expected June 2021',
               ),
             ],
