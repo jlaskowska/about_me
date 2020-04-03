@@ -1,6 +1,6 @@
 name: about_me
 description: A personal website and app about Joanna Laskowska.
-version: 0.2.0+1
+version: 0.2.1+2
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
