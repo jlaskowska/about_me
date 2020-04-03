@@ -14,7 +14,7 @@ class Projects extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Headline('Projects'),
+          Headline('App Portfolio'),
           const SizedBox(height: 16),
           for (ProjectDataModel project in ResumeSettings.projects)
             Column(
