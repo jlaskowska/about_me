@@ -3,6 +3,17 @@ import 'package:about_me/models/portfolio_projects_model.dart';
 class PortfolioSettings {
   static const projects = const [
     PortfolioProjectsModel(
+      title: 'Art Store',
+      description:
+          'An application which allows the user to buy artworks. The app is localized and internationalized into English and German, while popups style are adaptive across platforms. The user is able to zoom in and out (via pinching) on each artwork. A SQLite database is used to store all details about each artwork. Provider is used for dependency injection, while MobX is used as the project\'s state management solution.',
+      iconAssetPath: 'assets/images/common/artstore_app_icon.png',
+      screenshotAssetPaths: [
+        'assets/images/portfolio/artstore/01.gif',
+        'assets/images/portfolio/artstore/02.png',
+        'assets/images/portfolio/artstore/03.png',
+      ],
+    ),
+    PortfolioProjectsModel(
       title: 'About Me',
       description:
           'Personal website and mobile application containing my ré­su­mé as well as projects made using Flutter. Responsive design, optimized for multiple devices, screen sizes and orientations. Thus content is shown based on the space available while behavior is adaptive across platforms, e.g. displays mouse hand on web or inkwell button on mobile. The ré­su­mé is particularly noteworthy as it was created using 100% Flutter code.',
