@@ -1,6 +1,6 @@
 name: about_me
 description: A personal website and app about Joanna Laskowska.
-version: 0.2.1+2
+version: 0.2.2+3
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -21,15 +21,16 @@ flutter:
   uses-material-design: true
 
   assets:
-   - assets/images/common/
-   - assets/images/home_screen/
-   - assets/images/drawer/
-   - assets/images/portfolio/aboutme/
-   - assets/images/portfolio/questionnaires/
-   - assets/images/portfolio/quiz/
-   - assets/images/portfolio/signup/
-   - assets/images/portfolio/todo/
-   - assets/images/portfolio/weather/
+    - assets/images/common/
+    - assets/images/home_screen/
+    - assets/images/drawer/
+    - assets/images/portfolio/aboutme/
+    - assets/images/portfolio/artstore/
+    - assets/images/portfolio/questionnaires/
+    - assets/images/portfolio/quiz/
+    - assets/images/portfolio/signup/
+    - assets/images/portfolio/todo/
+    - assets/images/portfolio/weather/
 
   fonts:
     - family: Rubik
