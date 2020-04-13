@@ -13,13 +13,25 @@ class ResumeSettings {
     'CI/CD',
     'UI/UX',
     'Jira',
-    'Xcode',
+    // 'Xcode',
+    'SQLite',
     'Java',
     'Firebase',
     'Swift',
   ];
 
   static const List<ProjectDataModel> projects = const [
+    ProjectDataModel(
+      projectTitle: 'Art Store',
+      bulletPoints: [
+        'App to buy and view artworks.',
+        'Popups are adaptive across platforms.',
+        'Each artwork can be zoomed in and out.',
+        'A SQLite database stores details about each artwork.',
+        'Localized and internationalized into two langauges.',
+      ],
+      assetPath: 'assets/images/common/artstore_app_icon_border.png',
+    ),
     ProjectDataModel(
       projectTitle: 'About Me',
       bulletPoints: [
@@ -35,21 +47,21 @@ class ResumeSettings {
         'App to organize and keep track of tasks.',
         'Persists data to device using Hive.',
         'Supports both light and dark modes.',
-        'Localized into three languages.',
+        // 'Localized into three languages.',
         'Displays animated chart of completed tasks.',
       ],
       assetPath: 'assets/images/common/todo_app_icon.png',
     ),
-    ProjectDataModel(
-      projectTitle: 'Signup',
-      bulletPoints: [
-        'App to sign-up, sign-in and sign-out.',
-        'Main functionality defined in an interface.',
-        'Implementation powered by Firebase.',
-        'Unique background design achieved using custom drawn shapes and curves.',
-      ],
-      assetPath: 'assets/images/common/signup_app_icon.png',
-    )
+    // ProjectDataModel(
+    //   projectTitle: 'Signup',
+    //   bulletPoints: [
+    //     'App to sign-up, sign-in and sign-out.',
+    //     'Main functionality defined in an interface.',
+    //     'Implementation powered by Firebase.',
+    //     'Unique background design achieved using custom drawn shapes and curves.',
+    //   ],
+    //   assetPath: 'assets/images/common/signup_app_icon.png',
+    // )
   ];
 
   static const footnote = 'By reading this ré­su­mé you are interacting with Flutter code!';
