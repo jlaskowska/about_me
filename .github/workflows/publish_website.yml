@@ -1,0 +1,27 @@
+name: Publish Website
+on: [push]
+jobs:
+  build:
+    name: Build Web
+    env:
+      my_secret: ${{secrets.commit}}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: 'beta'
+      - run: flutter config --enable-web
+      - run: flutter pub get
+      - run: flutter build web --release
+      - run: |
+          cd build/web
+          git init
+          git config --global user.email 58981559+jlaskowska@users.noreply.github.com
+          git config --global user.name "Joanna Laskowska"
+          git status
+          git remote add origin https://${{secrets.commit}}@github.com/jlaskowska/jlaskowska.github.io.git
+          git checkout -b temp
+          git add -A
+          git commit -m "`date`"
+          git push origin master -f
