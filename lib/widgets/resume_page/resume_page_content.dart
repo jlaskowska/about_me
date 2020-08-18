@@ -1,3 +1,4 @@
+import 'package:about_me/widgets/resume_page/sections/footnote.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:about_me/config/project_colors.dart';
@@ -86,10 +87,10 @@ class _LandscapeContent extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Skills(),
-                  const SizedBox(height: 24),
                   Experience(),
                   const SizedBox(height: 16),
+                  Skills(),
+                  const SizedBox(height: 24),
                   Education(),
                   const SizedBox(height: 16),
                   Languages(),
