@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class ResumeSettings {
   static const summary =
-      'Flutter developer with one-year experience building elegant mobile applications. Results-driven problem solver who writes robust code and is passionate about testing. Quick learner looking for new challenges in an agile team environment.';
+      'Flutter developer with two years experience building elegant mobile applications. Results-driven problem solver who writes robust code and is passionate about testing. Quick learner looking for new challenges in an agile team environment.';
 
   static const skills = const [
     'Dart',
@@ -14,8 +14,7 @@ class ResumeSettings {
     'MobX',
     'CI/CD',
     'UI/UX',
-    'Jira',
-    // 'Xcode',
+    'BLoC',
     'SQLite',
     'Java',
     'Firebase',
