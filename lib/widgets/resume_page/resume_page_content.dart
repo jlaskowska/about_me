@@ -1,4 +1,3 @@
-import 'package:about_me/widgets/resume_page/sections/footnote.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:about_me/config/project_colors.dart';
