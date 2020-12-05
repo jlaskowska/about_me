@@ -86,10 +86,10 @@ class _LandscapeContent extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Skills(),
-                  const SizedBox(height: 24),
                   Experience(),
                   const SizedBox(height: 16),
+                  Skills(),
+                  const SizedBox(height: 24),
                   Education(),
                   const SizedBox(height: 16),
                   Languages(),

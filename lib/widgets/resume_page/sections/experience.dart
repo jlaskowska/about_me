@@ -1,3 +1,4 @@
+import 'package:about_me/config/resume_settings.dart';
 import 'package:flutter/material.dart';
 import 'package:about_me/widgets/resume_page/sections/common/content_tile.dart';
 import 'package:about_me/widgets/resume_page/sections/common/headline.dart';
@@ -16,22 +17,13 @@ class Experience extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              ContentTile(
-                icon: Icons.code,
-                title: 'Flutter Developer',
-                subtitle: 'Sept. 2019 - present, Berlin',
-              ),
-              ContentTile(
-                icon: Icons.local_hospital,
-                title: 'Neuropsychology Assistant',
-                subtitle: 'Sept. 2018 - Sept. 2019, Berlin',
-              ),
-              ContentTile(
-                icon: Icons.build,
-                iconSize: 34,
-                title: 'Technical Support, AVM',
-                subtitle: 'June 2015 - July 2017, Berlin',
-              ),
+              for (final job in ResumeSettings.jobs)
+                ContentTile(
+                  icon: job.icon,
+                  iconSize: job.iconSize,
+                  title: job.title,
+                  subtitle: job.subtitle,
+                ),
             ],
           )
         ],
