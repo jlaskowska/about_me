@@ -100,5 +100,5 @@ class ResumeSettings {
     ),
   ];
 
-  static const footnote = 'By reading this ré­su­mé you are interacting with Flutter code!';
+  static const footnote = 'Made with Flutter';
 }
